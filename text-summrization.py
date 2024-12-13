@@ -6,14 +6,6 @@ from heapq import nlargest
 from spacy.cli import download
 
 
-try:
-    nlp = spacy.load("en_core_web_sm")
-except OSError:
-    from spacy.cli import download
-    download("en_core_web_sm")
-    nlp = spacy.load("en_core_web_sm")
-
-
 
 st.set_page_config(page_title="Text Summarizer", layout="wide")
 st.markdown(
